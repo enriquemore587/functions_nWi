@@ -1,0 +1,14 @@
+
+
+SELECT 
+uPa."id" AS service_id, pac.name_package AS service_name, sH.description AS service_hour,
+u."name"||' '||u.last_name AS user_name, u.user_photo, u.phone, u."id" AS client_id, uA.gps, 
+"upper"(uA.street||' '|| (CASE WHEN uA.number_ext ISNULL THEN '1' ELSE uA.number_ext END)||', '||uA.colony||' C.P. '||uA.cp) AS address
+FROM "public"."user_packages" AS uPa
+INNER JOIN "public"."user" AS u ON u."id" = uPa.id_user
+INNER JOIN "public".services_hours AS sH ON sH."id" = uPa.service_hour_id
+INNER JOIN "public".user_address AS uA ON uA."id" = uPa.id_address
+INNER JOIN "public".packages AS pac ON pac."id" = uPa.id_package
+WHERE service_day_id = 3 AND uPa.status_service != 3
+ORDER BY sH.description ASC;
+

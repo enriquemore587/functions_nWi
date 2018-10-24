@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BackupProfile Ver="1.3">
+  <General ConnectionProjectName="" ConnectionProjectOwnerNavicatID="" ConnectionName="crediAdmin" DatabaseName="noohwi" SchemaName="public" Compressed="true" LockAllTables="false" UseSingleTransaction="false" UseSpecifyFileName="false" FileName="" Comments=""/>
+  <Tables SelectAll="false"/>
+  <Views SelectAll="false"/>
+  <Functions SelectAll="true"/>
+  <Events SelectAll="false"/>
+  <Sequences SelectAll="false"/>
+  <Indexes SelectAll="false"/>
+  <Triggers SelectAll="false"/>
+</BackupProfile>
